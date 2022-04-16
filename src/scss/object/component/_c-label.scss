@@ -1,0 +1,15 @@
+.c-label-wings {
+  align-items: flex-start;
+  background-image: url('../images/icon-wings.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+
+  @include pc {
+    background-size: 404px 86px;
+    height: 86px;
+    width: 404px;
+  }
+}

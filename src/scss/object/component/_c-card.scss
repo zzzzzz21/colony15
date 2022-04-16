@@ -10,3 +10,105 @@
   margin-bottom: 45px;
   text-align: center;
 }
+
+.c-card-feature-block {
+  display: grid;;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+}
+
+.c-card-feature-title {
+  align-items: center;
+  background: $base-deep-green;
+  color: $base-white;
+  display: flex;
+  flex: 1;
+  font-size: 18px;
+  font-weight: bold;
+  min-height: 45px;
+  padding: 0 30px;
+}
+
+.c-card-feature-icon {
+  margin-right: 10px;
+}
+
+.c-card-feature-content {
+  background: $base-beige;
+  padding: 25px 30px;
+}
+
+.c-card-floor {
+  
+}
+
+.c-card-floor-head {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.c-card-floor-title {
+  bottom: 0;
+  color: $base-deep-green;
+  font-size: 23px;
+  left: 0;
+  letter-spacing: -.075em;
+  position: absolute;
+}
+
+.c-card-floor-icon {
+
+}
+
+.c-card-floor-detail {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.c-card-floor-text {
+  @include pc {
+    padding-top: 12px;
+    width: 556px;
+  }
+}
+
+.c-card-floor-button {
+  margin: 25px auto 0;
+}
+
+.c-card-plan-title {
+  align-items: center;
+  display: flex;
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+
+.c-card-plan-title-text {
+  margin-left: 30px;
+}
+
+.c-card-map {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 48px;
+
+  &-image {
+    flex: 1;
+  }
+
+  &-detail {
+    flex: 1;
+
+    @include pc {
+      margin-left: 50px;
+    }
+  }
+
+  &-title {
+    margin-bottom: 2em;
+  }
+}

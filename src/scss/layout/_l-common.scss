@@ -7,3 +7,16 @@
 .l-main {
   flex: 1;
 }
+
+.l-inner {
+  background: $base-white;
+  border-radius: 20px;
+  margin: 0 auto;
+  max-width: $width-pc-inner;
+  position: relative;
+  z-index: 2;
+
+  @include pc {
+    padding: 70px;
+  }
+}

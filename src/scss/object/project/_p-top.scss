@@ -1,9 +1,127 @@
 .p-top-about {
   background: $base-beige;
-  padding: 50px 10px 0;
+  padding: 50px 10px 60px;
 }
 
 .p-top-about-inner {
   margin: 0 auto;
   max-width: $width-pc-inner;
+}
+
+.p-top-vision {
+  margin-top: 50px;
+}
+
+.p-top-vision-head {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.p-top-vision-lead {
+  text-align: center;
+}
+
+.p-top-vision-image {
+  font-size: 0;
+  margin-bottom: 25px;
+}
+
+.p-top-merit-kv {
+  align-items: center;
+  background: url('../images/image-merit-kv.jpg') center top / cover no-repeat;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+
+  @include pc {
+    height: 391px;
+  }
+}
+
+.p-top-merit-inner {
+  margin: 0 auto;
+  max-width: $width-pc-inner;
+}
+
+.p-top-merit-image {
+  background: $base-beige;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  padding-top: 43px;
+
+  @include pc {
+    min-height: 303px;
+  }
+}
+
+.p-top-floor {
+  background-color: $base-beige;
+  background-image: url('../images/image-floor-kv.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 684px;
+  padding: 84px 0 70px;
+}
+
+.p-top-floor-inner {
+  margin-top: 80px;
+}
+
+.p-top-floor-title {
+  margin-bottom: 32px;
+}
+
+.p-top-floor-section {
+  & + & {
+    margin-top: 88px;
+  }
+}
+
+.p-top-price {
+  background-color: $base-beige;
+  background-image: url('../images/image-merit-kv.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 910px;
+  padding: 84px 0 70px;
+}
+
+.p-top-price-inner {
+  margin-top: 80px;
+}
+
+.p-top-price-item {
+  & + & {
+    margin-top: 50px;
+  }
+}
+
+.p-top-price-buttons {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+  & > * {
+    &:not(:first-child) {
+      @include pc {
+        margin-left: 50px;
+      }
+    }
+  }
+}
+
+.p-top-map {
+  background-color: $base-beige;
+  position: relative;
+  
+  &::before {
+    background: $base-deep-green;
+    content: "";
+    height: 400px;
+    position: absolute;
+    top: -235px;
+    width: 100%;
+  }
 }

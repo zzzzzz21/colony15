@@ -201,7 +201,7 @@ body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   letter-spacing: 0.01em;
-  line-height: 1.5;
+  line-height: 1.8;
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -252,6 +252,20 @@ address {
   flex: 1;
 }
 
+.l-inner {
+  background: #fff;
+  border-radius: 20px;
+  margin: 0 auto;
+  max-width: 970px;
+  position: relative;
+  z-index: 2;
+}
+@media screen and (min-width: 769px) {
+  .l-inner {
+    padding: 70px;
+  }
+}
+
 .l-footer {
   align-items: center;
   background: #000;
@@ -270,10 +284,6 @@ address {
   padding: 10px 60px;
 }
 
-.c-breadcrumb {
-  display: flex;
-}
-
 .c-button-primary {
   align-items: center;
   background: #5D7248;
@@ -283,7 +293,12 @@ address {
   font-size: 20px;
   font-weight: bold;
   letter-spacing: 0.15em;
+  padding: 2px 12px;
   min-width: 340px;
+}
+.c-button-primary.is-small {
+  display: inline-flex;
+  min-width: auto;
 }
 
 .c-button-flat {
@@ -299,6 +314,15 @@ address {
   padding: 10px;
 }
 
+.c-button-border {
+  align-items: center;
+  border: 2px solid #5D7248;
+  display: inline-flex;
+  justify-content: center;
+  min-height: 52px;
+  min-width: 272px;
+}
+
 .c-card-article {
   background: #fff;
   border-radius: 20px;
@@ -310,6 +334,100 @@ address {
   font-size: 24px;
   margin-bottom: 45px;
   text-align: center;
+}
+
+.c-card-feature-block {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+}
+
+.c-card-feature-title {
+  align-items: center;
+  background: #5D7248;
+  color: #fff;
+  display: flex;
+  flex: 1;
+  font-size: 18px;
+  font-weight: bold;
+  min-height: 45px;
+  padding: 0 30px;
+}
+
+.c-card-feature-icon {
+  margin-right: 10px;
+}
+
+.c-card-feature-content {
+  background: #E8E1D6;
+  padding: 25px 30px;
+}
+
+.c-card-floor-head {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.c-card-floor-title {
+  bottom: 0;
+  color: #5D7248;
+  font-size: 23px;
+  left: 0;
+  letter-spacing: -0.075em;
+  position: absolute;
+}
+
+.c-card-floor-detail {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 769px) {
+  .c-card-floor-text {
+    padding-top: 12px;
+    width: 556px;
+  }
+}
+
+.c-card-floor-button {
+  margin: 25px auto 0;
+}
+
+.c-card-plan-title {
+  align-items: center;
+  display: flex;
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+
+.c-card-plan-title-text {
+  margin-left: 30px;
+}
+
+.c-card-map {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 48px;
+}
+.c-card-map-image {
+  flex: 1;
+}
+.c-card-map-detail {
+  flex: 1;
+}
+@media screen and (min-width: 769px) {
+  .c-card-map-detail {
+    margin-left: 50px;
+  }
+}
+.c-card-map-title {
+  margin-bottom: 2em;
 }
 
 .c-kv {
@@ -336,6 +454,23 @@ address {
   margin: 0 auto;
 }
 
+.c-label-wings {
+  align-items: flex-start;
+  background-image: url("../images/icon-wings.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+@media screen and (min-width: 769px) {
+  .c-label-wings {
+    background-size: 404px 86px;
+    height: 86px;
+    width: 404px;
+  }
+}
+
 .c-nav-footer {
   font-weight: bold;
 }
@@ -350,13 +485,71 @@ address {
   line-height: 2.2;
 }
 
+.c-parts-em {
+  border-bottom: 1px solid #5D7248;
+}
+
+.c-table-border {
+  background: #E8E1D6;
+  padding: 30px;
+}
+.c-table-border table {
+  table-layout: fixed;
+  width: 100%;
+}
+.c-table-border tr:not(:first-child) {
+  border-top: 1px solid #fff;
+}
+.c-table-border td {
+  padding: 10px 25px;
+}
+.c-table-border td:not(:first-child) {
+  border-left: 1px solid #fff;
+}
+
 .c-title-bar {
   align-items: center;
   border-bottom: 2px solid #000;
   border-top: 2px solid #000;
   display: flex;
+  font-size: 23px;
+  font-weight: bold;
   justify-content: center;
+  position: relative;
   min-height: 60px;
+}
+
+.c-title-bar-icon {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+}
+
+.c-title-kv {
+  color: #fff;
+  font-size: 49px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.c-title-square {
+  align-items: center;
+  background: #5D7248;
+  color: #fff;
+  display: flex;
+  font-size: 23px;
+  justify-content: center;
+  letter-spacing: 0.15em;
+  min-height: 70px;
+  padding: 8px;
+  text-align: center;
+}
+.c-title-square.is-small {
+  min-height: 40px;
+  padding: 0 8px;
+  letter-spacing: 0;
 }
 
 .p-footer {
@@ -399,12 +592,124 @@ address {
 
 .p-top-about {
   background: #E8E1D6;
-  padding: 50px 10px 0;
+  padding: 50px 10px 60px;
 }
 
 .p-top-about-inner {
   margin: 0 auto;
   max-width: 970px;
+}
+
+.p-top-vision {
+  margin-top: 50px;
+}
+
+.p-top-vision-head {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.p-top-vision-lead {
+  text-align: center;
+}
+
+.p-top-vision-image {
+  font-size: 0;
+  margin-bottom: 25px;
+}
+
+.p-top-merit-kv {
+  align-items: center;
+  background: url("../images/image-merit-kv.jpg") center top/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+@media screen and (min-width: 769px) {
+  .p-top-merit-kv {
+    height: 391px;
+  }
+}
+
+.p-top-merit-inner {
+  margin: 0 auto;
+  max-width: 970px;
+}
+
+.p-top-merit-image {
+  background: #E8E1D6;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  padding-top: 43px;
+}
+@media screen and (min-width: 769px) {
+  .p-top-merit-image {
+    min-height: 303px;
+  }
+}
+
+.p-top-floor {
+  background-color: #E8E1D6;
+  background-image: url("../images/image-floor-kv.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 684px;
+  padding: 84px 0 70px;
+}
+
+.p-top-floor-inner {
+  margin-top: 80px;
+}
+
+.p-top-floor-title {
+  margin-bottom: 32px;
+}
+
+.p-top-floor-section + .p-top-floor-section {
+  margin-top: 88px;
+}
+
+.p-top-price {
+  background-color: #E8E1D6;
+  background-image: url("../images/image-merit-kv.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 910px;
+  padding: 84px 0 70px;
+}
+
+.p-top-price-inner {
+  margin-top: 80px;
+}
+
+.p-top-price-item + .p-top-price-item {
+  margin-top: 50px;
+}
+
+.p-top-price-buttons {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+@media screen and (min-width: 769px) {
+  .p-top-price-buttons > *:not(:first-child) {
+    margin-left: 50px;
+  }
+}
+
+.p-top-map {
+  background-color: #E8E1D6;
+  position: relative;
+}
+.p-top-map::before {
+  background: #5D7248;
+  content: "";
+  height: 400px;
+  position: absolute;
+  top: -235px;
+  width: 100%;
 }
 
 .u-align-left {
