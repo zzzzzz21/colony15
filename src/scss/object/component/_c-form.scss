@@ -1,0 +1,77 @@
+.c-form-contact {
+  .component.form {
+    .group {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+
+      &:first-child {
+        .form-label {
+          padding-top: 30px;
+        }
+      }
+    }
+
+    .form-label,
+    .form-cont {
+      font-size: 16px;
+      min-height: 90px;
+    }
+
+    .form-label {
+      background: $base-deep-green;
+      color: $base-white;
+      font-weight: bold;
+      padding: 20px 0 0 30px;
+
+      @include pc {
+        width: 200px;
+      }
+    }
+
+    .form-cont {
+      border: 1px solid $base-form-border;
+      padding: 30px;
+      flex: 1;
+    }
+
+    .contact-submit {
+      display: none;
+    }
+
+    .form-submit {
+      text-align: center;
+      .popup-link {
+        background: $base-deep-green;
+        color: $base-white;
+        font-size: 20px;
+        padding: 15px 60px;
+
+        &.disabled {
+          opacity: .3;
+          pointer-events: none;
+        }
+
+        @include pc {
+          width: 340px;
+        }
+      }
+    }
+
+    input[type=text],
+    textarea {
+      border: 1px solid $base-form-border;
+      border-radius: 8px;
+      width: 100%
+    }
+
+    input[type=text] {
+      height: 30px;
+    }
+
+    textarea {
+      height: 215px;
+    }
+  }
+}
+

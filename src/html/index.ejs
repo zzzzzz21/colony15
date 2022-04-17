@@ -1,5 +1,5 @@
 <%- include('./include/_head') %>
-<div class="l-wrapper">
+<div class="l-wrapper" id="top">
   <%- include('./include/_header') %>
   <main class="l-main">
     <section class="p-top-kv">
@@ -11,15 +11,15 @@
 「高田馬場」駅 歩3分<br>
 “Colony#15” 2022年7月NEW OPEN
         </p>
-        <div class="c-kv-button">
-          <a href="" class="c-button-primary">
-            <img src="/assets/images/icon-number-15.svg" alt="15">
-            JR高田馬場駅からのアクセス
-          </a>
-        </div>
+      </div>
+      <div class="p-top-kv-button">
+        <a href="#access" class="c-button-primary">
+          <img src="/assets/images/icon-number-15.svg" alt="15">
+          JR高田馬場駅からのアクセス
+        </a>
       </div>
     </section>
-    <section class="p-top-about">
+    <section class="p-top-about" id="concept">
       <div class="p-top-about-inner">
         <div class="c-card-article">
           <h2 class="c-card-article-title">About Colony#</h2>
@@ -35,7 +35,7 @@
         <article class="p-top-vision">
           <h2 class="c-title-bar"><img src="/assets/images/text-vision.svg" alt="VISION"></h2>
           <p class="p-top-vision-head">目指したい風景</p>
-          <p class="p-top-vision-lead">働く場所はどこでもいい。それなら、<em class="c-underline">「誰かと出会える」</em>Colony＃で</p>
+          <p class="p-top-vision-lead">働く場所はどこでもいい。それなら、<em class="c-decoration-underline">「誰かと出会える」</em>Colony＃で</p>
           <div class="p-top-vision-image">
             <img src="/assets/images/image-vision-photo1.jpg" alt="">
           </div>
@@ -47,7 +47,7 @@
         </article>
       </div>
     </section>
-    <section class="p-top-merit">
+    <section class="p-top-merit" id="merit">
       <div class="p-top-merit-kv">
         <h2 class="c-title-kv">メリット</h2>
       </div>
@@ -90,7 +90,7 @@
         </div>
       </article>  
     </section>
-    <section class="p-top-floor">
+    <section class="p-top-floor" id="floor">
       <h2 class="c-title-kv">館内詳細</h2>
       <div class="p-top-floor-inner l-inner">
         <section class="p-top-floor-section">
@@ -99,7 +99,7 @@
             <div class="c-card-floor-head">
               <h4 class="c-card-floor-title">B1F MOKU²</h4>
               <div class="c-card-floor-icon">
-                <img src="/assets/images/icon-floor1.svg" alt="" width="105" height="77">
+                <img src="/assets/images/icon-floor1.svg" alt="" width="106" height="79">
               </div>
             </div>
             <div class="c-card-floor-block">
@@ -147,9 +147,93 @@
             </div>
           </article>
         </section>
+        <section class="p-top-floor-section">
+          <h3 class="p-top-floor-title c-title-square">スモールスタートアップオフィス</h3>
+          <article class="c-card-floor">
+            <div class="c-card-floor-head">
+              <h4 class="c-card-floor-title">2F GACHI²</h4>
+              <div class="c-card-floor-icon">
+                <img src="/assets/images/icon-floor3.svg" alt="" width="187" height="76">
+              </div>
+            </div>
+            <div class="c-card-floor-block">
+              <div class="c-card-floor-kv">
+                <img src="/assets/images/image-floor-photo3.jpg" alt="" width="830" height="552">
+              </div>
+              <div class="c-card-floor-detail">
+                <div class="c-card-floor-illust">
+                  <img src="/assets/images/image-floor-illust3.png" alt="" width="224" height="168">
+                </div>
+                <p class="c-card-floor-text">
+                  二つの企業が利用できるオフィスはこのフロアだけ。共用のスモールラウンジを活用し、情報共有や意見交換を図ることができます。お互いに刺 激し合い、新たな発想が得られたり、企業力を高めあうことにもつながります。登記、郵便物の受け取りサービス、館内ビジネスマッチングサービス、1階の共用ラウンジ、2階ラウンジ内のワークブースの利用も可能です。
+                </p>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section class="p-top-floor-section">
+          <h3 class="p-top-floor-title c-title-square">セットアップオフィス</h3>
+          <article class="c-card-floor">
+            <div class="c-card-floor-head">
+              <h4 class="c-card-floor-title">3F PATA²</h4>
+              <div class="c-card-floor-icon">
+                <img src="/assets/images/icon-floor4.svg" alt="" width="170" height="76">
+              </div>
+            </div>
+            <div class="c-card-floor-block">
+              <div class="c-card-floor-kv">
+                <img src="/assets/images/image-floor-photo4.jpg" alt="" width="830" height="415">
+              </div>
+              <div class="c-card-floor-detail">
+                <div class="c-card-floor-illust">
+                  <img src="/assets/images/image-floor-illust4.png" alt="" width="224" height="168">
+                </div>
+                <p class="c-card-floor-text">
+                  可動什器を取り入れ、会社の状況に合わせたカスタマイズができる自由度が最も高いフロアです。小ぶりな什器で可動がしやすいため、人員増加にも対応できる自由自在・変幻自在のオフィスです。登記、郵便物の受け取りサービス、館内ビジネスマッチングサービス、1階の共用ラウンジ、ワークブースの利用も可能です。
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="c-card-floor">
+            <div class="c-card-floor-head">
+              <h4 class="c-card-floor-title">4F SUKU²</h4>
+            </div>
+            <div class="c-card-floor-block">
+              <div class="c-card-floor-kv">
+                <img src="/assets/images/image-floor-photo5.jpg" alt="" width="830" height="415">
+              </div>
+              <div class="c-card-floor-detail">
+                <div class="c-card-floor-illust">
+                  <img src="/assets/images/image-floor-illust5.png" alt="" width="224" height="168">
+                </div>
+                <p class="c-card-floor-text">
+                  ゆるやかなゾーニングや人の会話、集まりを生む仕掛けが企業ごとのカルチャー醸成を後押しします。 Zone-Aではコミュニケーション、Zone-Bでは集中した執務とメリハリを持って働くことが可能です。 中央のシンボルツリーのように企業も人も成長していけるオフィスです。登記、郵便物の受け取りサービス、館内ビジネスマッチングサービス、1階の共用ラウンジ、ワークブースの利用も可能です。
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="c-card-floor">
+            <div class="c-card-floor-head">
+              <h4 class="c-card-floor-title">5F KOTO²</h4>
+            </div>
+            <div class="c-card-floor-block">
+              <div class="c-card-floor-kv">
+                <img src="/assets/images/image-floor-photo6.jpg" alt="" width="830" height="553">
+              </div>
+              <div class="c-card-floor-detail">
+                <div class="c-card-floor-illust">
+                  <img src="/assets/images/image-floor-illust6.png" alt="" width="224" height="244">
+                </div>
+                <p class="c-card-floor-text">
+                  最上階なので日差しが差し込む天窓と窓面が大きいバルコニーがあり、開放感のある空間。 開放的な空間だからこそ、集中力が高まるよう、人の視線が気にならないレイアウトになっています。 中央のシンボルツリーは社内マスコットとして可愛がってあげてください。登記、郵便物の受け取りサービス、館内ビジネスマッチングサービス、1階の共用ラウンジ、ワークブースの利用も可能です。
+                </p>
+              </div>
+            </div>
+          </article>
+        </section>
       </div>
     </section>
-    <section class="p-top-price">
+    <section class="p-top-price" id="price">
       <h2 class="c-title-kv">PLAN & PRICE</h2>
       <div class="p-top-price-inner l-inner">
         <div class="p-top-price-block">
@@ -239,7 +323,7 @@
                   </tr>
                 </tbody>
               </table>
-              <p>詳細はお問い合わせください</p>
+              <p class="c-table-border-bottom">詳細はお問い合わせください</p>
             </div>
           </article>
           <p class="p-top-price-buttons">
@@ -268,7 +352,7 @@
                   </tr>
                 </tbody>
               </table>
-              <p>詳細はお問い合わせください</p>
+              <p class="c-table-border-bottom">詳細はお問い合わせください</p>
             </div>
           </article>
           <p class="p-top-price-buttons">
@@ -278,10 +362,10 @@
         </div>
       </div>
     </section>
-    <section class="p-top-map">
+    <section class="p-top-map" id="access">
       <div class="p-top-map-inner l-inner">
         <h2 class="c-title-bar">ACCESS</h2>
-        <article class="c-card-map">
+        <article class="c-card-map p-top-map-map">
           <div class="c-card-map-detail">
             <h3 class="c-card-map-title">フレキシブルオフィスColony#15高田馬場</h3>
             <p class="c-card-map-text">
@@ -295,8 +379,64 @@
             <img src="/assets/images/image-map.svg" width="390" height="332">
           </div>
         </article>
+        <article class="c-card-visual p-top-map-kv">
+          <h3 class="c-card-visual-title" style="background-image: url('/assets/images/image-map-kv.jpg');">
+            高田馬場とColony＃
+          </h3>
+          <div class="c-card-visual-content">
+            <p class="c-card-visual-text">高田馬場は、言わずと知れた学生の街。早稲田大学など多くの大学・専門学校・予備校が集まっており、喫茶店やファミレスで勉強をする姿、夜は居酒屋で楽しく交流する姿が多くみられ、街には若さと活気が溢れている。</p>
+            <p class="c-card-visual-text">高田馬場駅はJR山手線・西武新宿線・東京メトロ東西線３線が乗り入れ、交通の利便性の高さ、乗換駅としての乗降客数の多さなど、人が集まる要素が高いのも特徴。オフィス街ではないものの大型のビル、中小型の事務所なども多く存在し、意外にも昼間は社会人を多く見かける。</p>
+            <p class="c-card-visual-text">決まった色はなく、学生・社会人・外国人など多くの人が過ごす街。</p>
+            <p class="c-card-visual-text">そんな文化の交差点で、明るい将来を目指しながら様々な分野で学ぶ学生が、徐々に成長していくように刺激を受けながら、1名オフィス→スモールオフィス→スタンダードオフィスへと成長を遂げていくColony＃。活気と刺激があって成長できる要素が一か所に詰まった情報集積地としての館（やかた）をADWがプロデュース。テナント企業様が成長できるような建物内、建物外との交流できる仕掛けも企てていきます。</p>
+          </div>
+        </article>
       </div>
 
+    </section>
+    <div class="p-top-nav">
+      <nav class="c-nav-top">
+        <a href="#concept" class="c-nav-top-link">コンセプト</a>
+        <a href="#merit" class="c-nav-top-link">メリット</a>
+        <a href="#floor" class="c-nav-top-link">館内詳細</a>
+        <a href="#price" class="c-nav-top-link">プランと料金</a>
+        <a href="#accss" class="c-nav-top-link">アクセス</a>
+      </nav>
+    </div>
+    <section class="p-top-form">
+      <h2 class="c-title-bar">お問い合わせ</h2>
+      <div class="p-top-form-inner">
+        <div class="c-form-contact">
+          <div class="component form">
+            <form class="contact_form">
+              <div class="group">
+                <label class="form-label require">お名前*</label>
+                <div class="form-cont">
+                  <input type="text" class="entry-component require">
+                </div>
+              </div>
+              <div class="group">
+                <label class="form-label require">ご連絡先<br>メールアドレス*</label>
+                <div class="form-cont">
+                  <input type="text" class="entry-component require">
+                </div>
+              </div>
+              <div class="group">
+                <label class="form-label">お問い合わせ<br>内容*</label>
+                <div class="form-cont"><textarea class="entry-component require"></textarea></div>
+              </div>
+              <div class="group">
+                <div class="form-submit"><input type="submit" name="commit" class="popup-link btn disabled" value="送　信" disabled=""></div>
+              <button name="button" type="button" class="contact-submit"></button></div>
+            </form>
+          </div>
+        </div>
+        <div class="p-top-form-totop">
+          <a herf="#top" class="c-button-totop">
+            <img src="/assets/images/icon-totop.svg" alt="" width="40" height="40" class="c-button-totop-icon">
+            <span class="c-button-totop-text">TOP</span>
+          </a>
+        </div>
+      </div>
     </section>
   </main>
   <%- include('./include/_footer') %>  

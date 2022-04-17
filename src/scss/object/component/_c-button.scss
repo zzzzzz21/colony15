@@ -8,11 +8,20 @@
   font-weight: bold;
   letter-spacing: .15em;
   padding: 2px 12px;
+  position: relative;
+  min-height: 50px;
   min-width: 340px;
 
   &.is-small {
     display: inline-flex;
+    min-height: auto;
     min-width: auto;
+  }
+
+  img {
+    left: 0;
+    position: absolute;
+    top: 0;
   }
 }
 
@@ -36,4 +45,23 @@
   justify-content: center;
   min-height: 52px;
   min-width: 272px;
+
+  @include pc {
+    &:hover {
+      background: $base-deep-green;
+      color: $base-white;
+    }
+  }
+}
+
+.c-button-totop {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  &-text {
+    font-weight: bold;
+    margin-top: 15px;
+  }
 }

@@ -1,3 +1,11 @@
+.p-top-kv {
+  background: $base-black;
+  padding-bottom: 36px;
+  &-button {
+    max-width: 370px;
+    margin: 25px auto 0;
+  }
+}
 .p-top-about {
   background: $base-beige;
   padding: 50px 10px 60px;
@@ -10,50 +18,65 @@
 
 .p-top-vision {
   margin-top: 50px;
-}
 
-.p-top-vision-head {
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: 25px;
-  text-align: center;
-}
+  &-head {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 25px;
+    text-align: center;
+  }
 
-.p-top-vision-lead {
-  text-align: center;
-}
+  &-lead {
+    margin-top: 10px;
+    text-align: center;
+  }
 
-.p-top-vision-image {
-  font-size: 0;
-  margin-bottom: 25px;
-}
+  &-image {
+    font-size: 0;
+    margin-top: 25px;
+  }
 
-.p-top-merit-kv {
-  align-items: center;
-  background: url('../images/image-merit-kv.jpg') center top / cover no-repeat;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 70px;
-
-  @include pc {
-    height: 391px;
+  &-text {
+    margin-top: 25px;
   }
 }
 
-.p-top-merit-inner {
-  margin: 0 auto;
-  max-width: $width-pc-inner;
-}
+.p-top-merit {
+  padding-bottom: 70px;
 
-.p-top-merit-image {
-  background: $base-beige;
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-  padding-top: 43px;
+  &-kv {
+    align-items: center;
+    background: url('../images/image-merit-kv.jpg') center top / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+    margin: 0 auto 70px;
+  
+    @include pc {
+      height: 391px;
+      width: calc(100% - 20px);
+    }
+  }
 
-  @include pc {
-    min-height: 303px;
+  &-inner {
+    margin: 0 auto;
+    max-width: $width-pc-inner;
+  }
+
+  &-image {
+    background: $base-beige;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding-top: 43px;
+  
+    @include pc {
+      min-height: 303px;
+    }
+  }
+
+  &-text {
+    margin: 45px 0;
   }
 }
 
@@ -63,50 +86,56 @@
   background-repeat: no-repeat;
   background-size: 100% 684px;
   padding: 84px 0 70px;
-}
 
-.p-top-floor-inner {
-  margin-top: 80px;
-}
+  &-inner {
+    margin-top: 80px;
+  }
 
-.p-top-floor-title {
-  margin-bottom: 32px;
-}
+  &-title {
+    margin-bottom: 32px;
+  }
 
-.p-top-floor-section {
-  & + & {
-    margin-top: 88px;
+  &-section {
+    & + & {
+      margin-top: 88px;
+    }
   }
 }
 
 .p-top-price {
   background-color: $base-beige;
-  background-image: url('../images/image-merit-kv.jpg');
+  background-image: url('../images/image-price-kv.jpg');
   background-repeat: no-repeat;
-  background-size: 100% 910px;
+  background-size: 100% 1024px;
   padding: 84px 0 70px;
-}
 
-.p-top-price-inner {
-  margin-top: 80px;
-}
-
-.p-top-price-item {
-  & + & {
-    margin-top: 50px;
+  &-inner {
+    margin-top: 80px;
   }
-}
 
-.p-top-price-buttons {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
+  &-block {
+    & + & {
+      margin-top: 50px;
+    }
+  }
 
-  & > * {
-    &:not(:first-child) {
-      @include pc {
-        margin-left: 50px;
+  &-item {
+    & + & {
+      margin-top: 50px;
+    }
+  }
+
+  &-buttons {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  
+    & > * {
+      &:not(:first-child) {
+        @include pc {
+          margin-left: 50px;
+        }
       }
     }
   }
@@ -114,6 +143,7 @@
 
 .p-top-map {
   background-color: $base-beige;
+  padding-bottom: 70px;
   position: relative;
   
   &::before {
@@ -123,5 +153,28 @@
     position: absolute;
     top: -235px;
     width: 100%;
+  }
+
+  &-map {
+    margin-top: 48px;
+  }
+
+  &-kv {
+    margin-top: 52px;
+  }
+}
+
+.p-top-form {
+  margin: 0 auto;
+  max-width: $width-pc-inner;
+  padding: 70px 0 50px;
+
+
+  &-inner {
+    margin-top: 50px;
+  }
+
+  &-totop {
+    text-align: center;
   }
 }

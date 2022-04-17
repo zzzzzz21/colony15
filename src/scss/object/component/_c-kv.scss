@@ -1,11 +1,36 @@
 .c-kv {
-  background-color: $base-black;
+  background-color: $base-white;
   background-image: url('../images/image-kv1.jpg');
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
-  background-size: 100% 391px;
+  background-size: 100%;
   color: $base-white;
+  margin: 0 auto;
+  padding: 60px 0 35px;
+  position: relative;
   text-align: center;
+
+  @include pc {
+    height: 391px;
+  }
+
+  &::before,
+  &::after {
+    background: $base-white;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 10px;
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
 }
 
 .c-kv-title {
@@ -15,9 +40,6 @@
 .c-kv-lead {
   font-size: 22px;
   letter-spacing: .05em;
-}
-
-.c-kv-button {
-  max-width: 370px;
-  margin: 0 auto;
+  line-height: 1.7;
+  margin-top: 20px;
 }

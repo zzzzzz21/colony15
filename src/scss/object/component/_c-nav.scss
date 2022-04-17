@@ -1,13 +1,33 @@
 .c-nav-footer {
   font-weight: bold;
+
+  &-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  &-list {
+    font-size: 16px;
+    line-height: 2.2;
+  }
 }
 
-.c-nav-footer-title {
+.c-nav-top {
+  align-items: center;
+  background: $base-black;
+  color: $base-white;
+  display: flex;
   font-size: 18px;
-  margin-bottom: 15px;
+  justify-content: center;
+  min-height: 70px;
+
+  &-link {
+    &:hover {
+      opacity: .7;
+    }
+    &:nth-of-type(n+2) {
+      margin-left: 70px;
+    }
+  }
 }
 
-.c-nav-footer-list {
-  font-size: 16px;
-  line-height: 2.2;
-}

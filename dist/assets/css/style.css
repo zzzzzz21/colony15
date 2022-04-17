@@ -294,11 +294,19 @@ address {
   font-weight: bold;
   letter-spacing: 0.15em;
   padding: 2px 12px;
+  position: relative;
+  min-height: 50px;
   min-width: 340px;
 }
 .c-button-primary.is-small {
   display: inline-flex;
+  min-height: auto;
   min-width: auto;
+}
+.c-button-primary img {
+  left: 0;
+  position: absolute;
+  top: 0;
 }
 
 .c-button-flat {
@@ -322,18 +330,37 @@ address {
   min-height: 52px;
   min-width: 272px;
 }
+@media screen and (min-width: 769px) {
+  .c-button-border:hover {
+    background: #5D7248;
+    color: #fff;
+  }
+}
+
+.c-button-totop {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.c-button-totop-text {
+  font-weight: bold;
+  margin-top: 15px;
+}
 
 .c-card-article {
   background: #fff;
   border-radius: 20px;
   padding: 45px 45px 65px;
 }
-
 .c-card-article-title {
   color: #5D7248;
   font-size: 24px;
-  margin-bottom: 45px;
+  margin-bottom: 38px;
   text-align: center;
+}
+.c-card-article-text {
+  line-height: 1.5;
 }
 
 .c-card-feature-block {
@@ -343,7 +370,6 @@ address {
   grid-template-columns: 1fr 1fr;
   grid-gap: 50px;
 }
-
 .c-card-feature-title {
   align-items: center;
   background: #5D7248;
@@ -355,23 +381,23 @@ address {
   min-height: 45px;
   padding: 0 30px;
 }
-
 .c-card-feature-icon {
   margin-right: 10px;
 }
-
 .c-card-feature-content {
   background: #E8E1D6;
-  padding: 25px 30px;
+  padding: 23px 30px 20px;
 }
 
+.c-card-floor + .c-card-floor {
+  margin-top: 45px;
+}
 .c-card-floor-head {
   display: flex;
   justify-content: center;
   margin-bottom: 12px;
   position: relative;
 }
-
 .c-card-floor-title {
   bottom: 0;
   color: #5D7248;
@@ -380,21 +406,17 @@ address {
   letter-spacing: -0.075em;
   position: absolute;
 }
-
 .c-card-floor-detail {
   align-items: center;
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
-
 @media screen and (min-width: 769px) {
   .c-card-floor-text {
-    padding-top: 12px;
     width: 556px;
   }
 }
-
 .c-card-floor-button {
   margin: 25px auto 0;
 }
@@ -413,10 +435,10 @@ address {
 .c-card-map {
   display: flex;
   flex-direction: row-reverse;
-  margin-top: 48px;
 }
 .c-card-map-image {
   flex: 1;
+  font-size: 0;
 }
 .c-card-map-detail {
   flex: 1;
@@ -430,14 +452,119 @@ address {
   margin-bottom: 2em;
 }
 
-.c-kv {
-  background-color: #000;
-  background-image: url("../images/image-kv1.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 391px;
+.c-card-visual-title {
+  align-items: center;
+  display: flex;
   color: #fff;
+  font-size: 23px;
+  font-weight: bold;
+  justify-content: center;
+  min-height: 250px;
+}
+.c-card-visual-content {
+  margin-top: 27px;
+}
+.c-card-visual-text + .c-card-visual-text {
+  margin-top: 1em;
+}
+
+.c-decoration-underline {
+  border-bottom: 3px solid #5D7248;
+}
+
+.c-form-contact .component.form .group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.c-form-contact .component.form .group:first-child .form-label {
+  padding-top: 30px;
+}
+.c-form-contact .component.form .form-label,
+.c-form-contact .component.form .form-cont {
+  font-size: 16px;
+  min-height: 90px;
+}
+.c-form-contact .component.form .form-label {
+  background: #5D7248;
+  color: #fff;
+  font-weight: bold;
+  padding: 20px 0 0 30px;
+}
+@media screen and (min-width: 769px) {
+  .c-form-contact .component.form .form-label {
+    width: 200px;
+  }
+}
+.c-form-contact .component.form .form-cont {
+  border: 1px solid #7C7C7C;
+  padding: 30px;
+  flex: 1;
+}
+.c-form-contact .component.form .contact-submit {
+  display: none;
+}
+.c-form-contact .component.form .form-submit {
   text-align: center;
+}
+.c-form-contact .component.form .form-submit .popup-link {
+  background: #5D7248;
+  color: #fff;
+  font-size: 20px;
+  padding: 15px 60px;
+}
+.c-form-contact .component.form .form-submit .popup-link.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+@media screen and (min-width: 769px) {
+  .c-form-contact .component.form .form-submit .popup-link {
+    width: 340px;
+  }
+}
+.c-form-contact .component.form input[type=text],
+.c-form-contact .component.form textarea {
+  border: 1px solid #7C7C7C;
+  border-radius: 8px;
+  width: 100%;
+}
+.c-form-contact .component.form input[type=text] {
+  height: 30px;
+}
+.c-form-contact .component.form textarea {
+  height: 215px;
+}
+
+.c-kv {
+  background-color: #fff;
+  background-image: url("../images/image-kv1.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: #fff;
+  margin: 0 auto;
+  padding: 60px 0 35px;
+  position: relative;
+  text-align: center;
+}
+@media screen and (min-width: 769px) {
+  .c-kv {
+    height: 391px;
+  }
+}
+.c-kv::before, .c-kv::after {
+  background: #fff;
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 10px;
+}
+.c-kv::before {
+  left: 0;
+}
+.c-kv::after {
+  right: 0;
 }
 
 .c-kv-title {
@@ -447,11 +574,8 @@ address {
 .c-kv-lead {
   font-size: 22px;
   letter-spacing: 0.05em;
-}
-
-.c-kv-button {
-  max-width: 370px;
-  margin: 0 auto;
+  line-height: 1.7;
+  margin-top: 20px;
 }
 
 .c-label-wings {
@@ -474,15 +598,29 @@ address {
 .c-nav-footer {
   font-weight: bold;
 }
-
 .c-nav-footer-title {
   font-size: 18px;
   margin-bottom: 15px;
 }
-
 .c-nav-footer-list {
   font-size: 16px;
   line-height: 2.2;
+}
+
+.c-nav-top {
+  align-items: center;
+  background: #000;
+  color: #fff;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  min-height: 70px;
+}
+.c-nav-top-link:hover {
+  opacity: 0.7;
+}
+.c-nav-top-link:nth-of-type(n+2) {
+  margin-left: 70px;
 }
 
 .c-parts-em {
@@ -505,6 +643,11 @@ address {
 }
 .c-table-border td:not(:first-child) {
   border-left: 1px solid #fff;
+}
+.c-table-border-bottom {
+  line-height: 1.2;
+  margin-top: 28px;
+  text-align: center;
 }
 
 .c-title-bar {
@@ -547,9 +690,10 @@ address {
   text-align: center;
 }
 .c-title-square.is-small {
-  min-height: 40px;
-  padding: 0 8px;
   letter-spacing: 0;
+  min-height: 40px;
+  min-width: 77px;
+  padding: 0 8px;
 }
 
 .p-footer {
@@ -590,6 +734,15 @@ address {
   margin: 43px 0 0;
 }
 
+.p-top-kv {
+  background: #000;
+  padding-bottom: 36px;
+}
+.p-top-kv-button {
+  max-width: 370px;
+  margin: 25px auto 0;
+}
+
 .p-top-about {
   background: #E8E1D6;
   padding: 50px 10px 60px;
@@ -603,41 +756,45 @@ address {
 .p-top-vision {
   margin-top: 50px;
 }
-
 .p-top-vision-head {
   font-size: 24px;
   font-weight: bold;
   margin-top: 25px;
   text-align: center;
 }
-
 .p-top-vision-lead {
+  margin-top: 10px;
   text-align: center;
 }
-
 .p-top-vision-image {
   font-size: 0;
-  margin-bottom: 25px;
+  margin-top: 25px;
+}
+.p-top-vision-text {
+  margin-top: 25px;
 }
 
+.p-top-merit {
+  padding-bottom: 70px;
+}
 .p-top-merit-kv {
   align-items: center;
   background: url("../images/image-merit-kv.jpg") center top/cover no-repeat;
   display: flex;
   justify-content: center;
   margin-bottom: 70px;
+  margin: 0 auto 70px;
 }
 @media screen and (min-width: 769px) {
   .p-top-merit-kv {
     height: 391px;
+    width: calc(100% - 20px);
   }
 }
-
 .p-top-merit-inner {
   margin: 0 auto;
   max-width: 970px;
 }
-
 .p-top-merit-image {
   background: #E8E1D6;
   display: flex;
@@ -650,6 +807,9 @@ address {
     min-height: 303px;
   }
 }
+.p-top-merit-text {
+  margin: 45px 0;
+}
 
 .p-top-floor {
   background-color: #E8E1D6;
@@ -658,35 +818,32 @@ address {
   background-size: 100% 684px;
   padding: 84px 0 70px;
 }
-
 .p-top-floor-inner {
   margin-top: 80px;
 }
-
 .p-top-floor-title {
   margin-bottom: 32px;
 }
-
 .p-top-floor-section + .p-top-floor-section {
   margin-top: 88px;
 }
 
 .p-top-price {
   background-color: #E8E1D6;
-  background-image: url("../images/image-merit-kv.jpg");
+  background-image: url("../images/image-price-kv.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 910px;
+  background-size: 100% 1024px;
   padding: 84px 0 70px;
 }
-
 .p-top-price-inner {
   margin-top: 80px;
 }
-
+.p-top-price-block + .p-top-price-block {
+  margin-top: 50px;
+}
 .p-top-price-item + .p-top-price-item {
   margin-top: 50px;
 }
-
 .p-top-price-buttons {
   align-items: center;
   display: flex;
@@ -701,6 +858,7 @@ address {
 
 .p-top-map {
   background-color: #E8E1D6;
+  padding-bottom: 70px;
   position: relative;
 }
 .p-top-map::before {
@@ -710,6 +868,24 @@ address {
   position: absolute;
   top: -235px;
   width: 100%;
+}
+.p-top-map-map {
+  margin-top: 48px;
+}
+.p-top-map-kv {
+  margin-top: 52px;
+}
+
+.p-top-form {
+  margin: 0 auto;
+  max-width: 970px;
+  padding: 70px 0 50px;
+}
+.p-top-form-inner {
+  margin-top: 50px;
+}
+.p-top-form-totop {
+  text-align: center;
 }
 
 .u-align-left {

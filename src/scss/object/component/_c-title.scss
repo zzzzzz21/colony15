@@ -38,8 +38,9 @@
   text-align: center;
 
   &.is-small {
-    min-height: 40px;
-    padding: 0 8px;
     letter-spacing: 0;
+    min-height: 40px;
+    min-width: 77px;
+    padding: 0 8px;
   }
 }
