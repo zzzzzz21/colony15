@@ -8,14 +8,29 @@
   justify-content: center;
   position: relative;
   min-height: 60px;
-}
 
-.c-title-bar-icon {
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  position: absolute;
-  top: 0;
+  @include sp {
+    font-size: 12px;
+    min-height: 30px;
+  }
+
+  &-number {
+    @include sp {
+      width: 48px;
+    }
+  }
+
+  &-icon {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    top: 0;
+
+    @include sp {
+      width: 21px;
+    }
+  }
 }
 
 .c-title-kv {
@@ -23,6 +38,10 @@
   font-size: 49px;
   font-weight: bold;
   text-align: center;
+
+  @include sp {
+    font-size: 15px;
+  }
 }
 
 .c-title-square {

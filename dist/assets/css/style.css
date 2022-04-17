@@ -209,6 +209,11 @@ body {
   text-size-adjust: 100%;
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 10px;
+  }
+}
 
 a {
   color: inherit;
@@ -217,6 +222,7 @@ a {
 }
 
 img {
+  height: auto;
   max-width: 100%;
 }
 
@@ -283,6 +289,12 @@ address {
   min-height: 100px;
   padding: 10px 60px;
 }
+@media screen and (max-width: 768px) {
+  .l-header {
+    min-height: 50px;
+    padding: 5px 15px;
+  }
+}
 
 .c-button-primary {
   align-items: center;
@@ -295,18 +307,36 @@ address {
   letter-spacing: 0.15em;
   padding: 2px 12px;
   position: relative;
-  min-height: 50px;
-  min-width: 340px;
+}
+@media screen and (min-width: 769px) {
+  .c-button-primary {
+    min-height: 50px;
+    min-width: 340px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .c-button-primary {
+    font-size: 10px;
+  }
 }
 .c-button-primary.is-small {
   display: inline-flex;
-  min-height: auto;
-  min-width: auto;
+}
+@media screen and (min-width: 769px) {
+  .c-button-primary.is-small {
+    min-height: auto;
+    min-width: auto;
+  }
 }
 .c-button-primary img {
   left: 0;
   position: absolute;
   top: 0;
+}
+@media screen and (max-width: 768px) {
+  .c-button-primary img {
+    width: 17px;
+  }
 }
 
 .c-button-flat {
@@ -327,16 +357,17 @@ address {
   border: 2px solid #5D7248;
   display: inline-flex;
   justify-content: center;
-  min-height: 52px;
-  min-width: 272px;
 }
 @media screen and (min-width: 769px) {
+  .c-button-border {
+    min-height: 52px;
+    min-width: 272px;
+  }
   .c-button-border:hover {
     background: #5D7248;
     color: #fff;
   }
 }
-
 .c-button-totop {
   align-items: center;
   display: inline-flex;
@@ -353,11 +384,24 @@ address {
   border-radius: 20px;
   padding: 45px 45px 65px;
 }
+@media screen and (max-width: 768px) {
+  .c-card-article {
+    border-radius: 10px;
+    margin: 0 20px;
+    padding: 15px 20px 10px;
+  }
+}
 .c-card-article-title {
   color: #5D7248;
   font-size: 24px;
   margin-bottom: 38px;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .c-card-article-title {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
 }
 .c-card-article-text {
   line-height: 1.5;
@@ -551,31 +595,46 @@ address {
   .c-kv {
     height: 391px;
   }
+  .c-kv::before, .c-kv::after {
+    background: #fff;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 10px;
+  }
+  .c-kv::before {
+    left: 0;
+  }
+  .c-kv::after {
+    right: 0;
+  }
 }
-.c-kv::before, .c-kv::after {
-  background: #fff;
-  content: "";
-  height: 100%;
-  position: absolute;
-  top: 0;
-  width: 10px;
+@media screen and (max-width: 768px) {
+  .c-kv {
+    background-size: cover;
+    padding: 32px 0;
+  }
 }
-.c-kv::before {
-  left: 0;
-}
-.c-kv::after {
-  right: 0;
-}
-
 .c-kv-title {
   font-size: 49px;
 }
-
+@media screen and (max-width: 768px) {
+  .c-kv-title {
+    font-size: 15px;
+  }
+}
 .c-kv-lead {
   font-size: 22px;
   letter-spacing: 0.05em;
   line-height: 1.7;
   margin-top: 20px;
+}
+@media screen and (max-width: 768px) {
+  .c-kv-lead {
+    font-size: 11px;
+    line-height: 1.5;
+  }
 }
 
 .c-label-wings {
@@ -661,7 +720,17 @@ address {
   position: relative;
   min-height: 60px;
 }
-
+@media screen and (max-width: 768px) {
+  .c-title-bar {
+    font-size: 12px;
+    min-height: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .c-title-bar-number {
+    width: 48px;
+  }
+}
 .c-title-bar-icon {
   bottom: 0;
   left: 0;
@@ -669,12 +738,22 @@ address {
   position: absolute;
   top: 0;
 }
+@media screen and (max-width: 768px) {
+  .c-title-bar-icon {
+    width: 21px;
+  }
+}
 
 .c-title-kv {
   color: #fff;
   font-size: 49px;
   font-weight: bold;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .c-title-kv {
+    font-size: 15px;
+  }
 }
 
 .c-title-square {
@@ -734,20 +813,48 @@ address {
   margin: 43px 0 0;
 }
 
+.p-header-title {
+  font-size: 0;
+}
+@media screen and (max-width: 768px) {
+  .p-header-title img {
+    width: 65px;
+  }
+}
+
 .p-top-kv {
   background: #000;
   padding-bottom: 36px;
 }
+@media screen and (max-width: 768px) {
+  .p-top-kv {
+    padding-bottom: 18px;
+  }
+}
 .p-top-kv-button {
-  max-width: 370px;
   margin: 25px auto 0;
+  max-width: 370px;
+}
+@media screen and (max-width: 768px) {
+  .p-top-kv-button {
+    margin: 15px auto 0;
+    max-width: 185px;
+  }
 }
 
 .p-top-about {
   background: #E8E1D6;
-  padding: 50px 10px 60px;
 }
-
+@media screen and (min-width: 769px) {
+  .p-top-about {
+    padding: 50px 10px 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .p-top-about {
+    padding: 20px 0 30px;
+  }
+}
 .p-top-about-inner {
   margin: 0 auto;
   max-width: 970px;
@@ -756,22 +863,53 @@ address {
 .p-top-vision {
   margin-top: 50px;
 }
+@media screen and (max-width: 768px) {
+  .p-top-vision {
+    margin-top: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .p-top-vision-title {
+    margin: 0 20px;
+  }
+}
 .p-top-vision-head {
   font-size: 24px;
   font-weight: bold;
   margin-top: 25px;
   text-align: center;
 }
+@media screen and (max-width: 768px) {
+  .p-top-vision-head {
+    font-size: 12px;
+    margin: 10px 20px 0;
+  }
+}
 .p-top-vision-lead {
   margin-top: 10px;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .p-top-vision-lead {
+    margin: 10px 20px 0;
+  }
 }
 .p-top-vision-image {
   font-size: 0;
   margin-top: 25px;
 }
+@media screen and (max-width: 768px) {
+  .p-top-vision-image {
+    margin-top: 12px;
+  }
+}
 .p-top-vision-text {
   margin-top: 25px;
+}
+@media screen and (max-width: 768px) {
+  .p-top-vision-text {
+    margin: 10px 20px 0;
+  }
 }
 
 .p-top-merit {
@@ -782,18 +920,29 @@ address {
   background: url("../images/image-merit-kv.jpg") center top/cover no-repeat;
   display: flex;
   justify-content: center;
-  margin-bottom: 70px;
   margin: 0 auto 70px;
 }
 @media screen and (min-width: 769px) {
   .p-top-merit-kv {
     height: 391px;
+    margin-bottom: 70px;
     width: calc(100% - 20px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .p-top-merit-kv {
+    height: 90px;
+    margin-bottom: 24px;
   }
 }
 .p-top-merit-inner {
   margin: 0 auto;
   max-width: 970px;
+}
+@media screen and (max-width: 768px) {
+  .p-top-merit-title {
+    margin: 0 20px;
+  }
 }
 .p-top-merit-image {
   background: #E8E1D6;
@@ -874,6 +1023,12 @@ address {
 }
 .p-top-map-kv {
   margin-top: 52px;
+}
+
+@media screen and (max-width: 768px) {
+  .p-top-nav {
+    display: none;
+  }
 }
 
 .p-top-form {

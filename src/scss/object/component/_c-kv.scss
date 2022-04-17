@@ -12,34 +12,48 @@
 
   @include pc {
     height: 391px;
+
+    &::before,
+    &::after {
+      background: $base-white;
+      content: "";
+      height: 100%;
+      position: absolute;
+      top: 0;
+      width: 10px;
+    }
+  
+    &::before {
+      left: 0;
+    }
+  
+    &::after {
+      right: 0;
+    }
   }
 
-  &::before,
-  &::after {
-    background: $base-white;
-    content: "";
-    height: 100%;
-    position: absolute;
-    top: 0;
-    width: 10px;
+  @include sp {
+    background-size: cover;
+    padding: 32px 0;
   }
 
-  &::before {
-    left: 0;
+  &-title {
+    font-size: 49px;
+
+    @include sp {
+      font-size: 15px;
+    }
   }
 
-  &::after {
-    right: 0;
+  &-lead {
+    font-size: 22px;
+    letter-spacing: .05em;
+    line-height: 1.7;
+    margin-top: 20px;
+
+    @include sp {
+      font-size: 11px;
+      line-height: 1.5;
+    }
   }
-}
-
-.c-kv-title {
-  font-size: 49px;
-}
-
-.c-kv-lead {
-  font-size: 22px;
-  letter-spacing: .05em;
-  line-height: 1.7;
-  margin-top: 20px;
 }

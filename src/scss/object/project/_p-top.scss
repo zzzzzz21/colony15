@@ -1,43 +1,87 @@
 .p-top-kv {
   background: $base-black;
   padding-bottom: 36px;
+
+  @include sp {
+    padding-bottom: 18px;
+  }
+
   &-button {
-    max-width: 370px;
     margin: 25px auto 0;
+    max-width: 370px;
+
+    @include sp {
+      margin: 15px auto 0;
+      max-width: 185px;
+    }
   }
 }
 .p-top-about {
   background: $base-beige;
-  padding: 50px 10px 60px;
-}
 
-.p-top-about-inner {
-  margin: 0 auto;
-  max-width: $width-pc-inner;
+  @include pc {
+    padding: 50px 10px 60px;
+  }
+
+  @include sp {
+    padding: 20px 0 30px;
+  }
+
+  &-inner {
+    margin: 0 auto;
+    max-width: $width-pc-inner;
+  }
 }
 
 .p-top-vision {
   margin-top: 50px;
+
+  @include sp {
+    margin-top: 25px;
+  }
+
+  &-title {
+    @include sp {
+      margin: 0 $margin-sp-side;
+    }
+  }
 
   &-head {
     font-size: 24px;
     font-weight: bold;
     margin-top: 25px;
     text-align: center;
+
+    @include sp {
+      font-size: 12px;
+      margin: 10px $margin-sp-side 0;
+    }
   }
 
   &-lead {
     margin-top: 10px;
     text-align: center;
+
+    @include sp {
+      margin: 10px $margin-sp-side 0;
+    }
   }
 
   &-image {
     font-size: 0;
     margin-top: 25px;
+
+    @include sp {
+      margin-top: 12px;
+    }
   }
 
   &-text {
     margin-top: 25px;
+
+    @include sp {
+      margin: 10px $margin-sp-side 0;
+    }
   }
 }
 
@@ -49,18 +93,29 @@
     background: url('../images/image-merit-kv.jpg') center top / cover no-repeat;
     display: flex;
     justify-content: center;
-    margin-bottom: 70px;
     margin: 0 auto 70px;
   
     @include pc {
       height: 391px;
+      margin-bottom: 70px;
       width: calc(100% - 20px);
+    }
+
+    @include sp {
+      height: 90px;
+      margin-bottom: 24px;
     }
   }
 
   &-inner {
     margin: 0 auto;
     max-width: $width-pc-inner;
+  }
+
+  &-title {
+    @include sp {
+      margin: 0 $margin-sp-side;
+    }
   }
 
   &-image {
@@ -161,6 +216,12 @@
 
   &-kv {
     margin-top: 52px;
+  }
+}
+
+.p-top-nav {
+  @include sp {
+    display: none;
   }
 }
 

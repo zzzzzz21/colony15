@@ -1,0 +1,8 @@
+.p-header-title {
+  font-size: 0;
+  & img {
+    @include sp {
+      width: 65px;
+    }
+  }
+}

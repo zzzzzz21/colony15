@@ -9,19 +9,33 @@
   letter-spacing: .15em;
   padding: 2px 12px;
   position: relative;
-  min-height: 50px;
-  min-width: 340px;
+
+  @include pc {
+    min-height: 50px;
+    min-width: 340px;
+  }
+
+  @include sp {
+    font-size: 10px;
+  }
 
   &.is-small {
     display: inline-flex;
-    min-height: auto;
-    min-width: auto;
+    @include pc {
+      min-height: auto;
+      min-width: auto;
+    }
+
   }
 
   img {
     left: 0;
     position: absolute;
     top: 0;
+
+    @include sp {
+      width: 17px;
+    }
   }
 }
 
@@ -43,14 +57,18 @@
   border: 2px solid $base-deep-green;
   display: inline-flex;
   justify-content: center;
-  min-height: 52px;
-  min-width: 272px;
 
   @include pc {
+    min-height: 52px;
+    min-width: 272px;
     &:hover {
       background: $base-deep-green;
       color: $base-white;
     }
+  }
+
+  @include sp {
+    
   }
 }
 

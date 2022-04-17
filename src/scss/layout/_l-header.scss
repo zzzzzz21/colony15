@@ -4,4 +4,9 @@
   display: flex;
   min-height: 100px;
   padding: 10px 60px;
+
+  @include sp {
+    min-height: 50px;
+    padding: 5px 15px;
+  }
 }

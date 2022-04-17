@@ -18,6 +18,10 @@ body {
   -webkit-overflow-scrolling: touch;
   text-size-adjust: 100%;
   width: 100%;
+
+  @include sp {
+    font-size: 10px;
+  }
 }
 
 a {
@@ -27,6 +31,7 @@ a {
 }
 
 img {
+  height: auto;
   max-width: 100%;
 }
 
