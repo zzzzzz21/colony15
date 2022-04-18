@@ -5,6 +5,10 @@
       justify-content: center;
       margin-bottom: 30px;
 
+      @include sp {
+        margin-bottom: 15px;
+      }
+
       &:first-child {
         .form-label {
           padding-top: 30px;
@@ -16,16 +20,27 @@
     .form-cont {
       font-size: 16px;
       min-height: 90px;
+
+      @include sp {
+        font-size: 10px;
+        min-height: 45px;
+      }
     }
 
     .form-label {
       background: $base-deep-green;
       color: $base-white;
       font-weight: bold;
-      padding: 20px 0 0 30px;
+      
 
       @include pc {
+        padding: 20px 0 0 30px;
         width: 200px;
+      }
+
+      @include sp {
+        padding: 6px 0 0 6px;
+        width: 88px;
       }
     }
 
@@ -33,6 +48,11 @@
       border: 1px solid $base-form-border;
       padding: 30px;
       flex: 1;
+
+      @include sp {
+        display: flex;
+        padding: 15px;
+      }
     }
 
     .contact-submit {
@@ -44,17 +64,24 @@
       .popup-link {
         background: $base-deep-green;
         color: $base-white;
-        font-size: 20px;
-        padding: 15px 60px;
 
+        @include pc {
+          font-size: 20px;
+          padding: 15px 60px;
+          width: 340px;
+        }
+
+        @include sp {
+          font-size: 10px;
+          padding: 5px 10px;
+          width: 104px;
+        }
+      
         &.disabled {
           opacity: .3;
           pointer-events: none;
         }
 
-        @include pc {
-          width: 340px;
-        }
       }
     }
 
@@ -67,10 +94,18 @@
 
     input[type=text] {
       height: 30px;
+
+      @include sp {
+        height: 15px;
+      }
     }
 
     textarea {
       height: 215px;
+
+      @include sp {
+        height: 110px;
+      }
     }
   }
 }

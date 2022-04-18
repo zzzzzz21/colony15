@@ -56,10 +56,25 @@
   padding: 8px;
   text-align: center;
 
+  @include sp {
+    font-size: 10px;
+    min-height: 25px;
+    padding: 4px;
+  }
+
   &.is-small {
     letter-spacing: 0;
-    min-height: 40px;
-    min-width: 77px;
-    padding: 0 8px;
+
+    @include pc {
+      min-height: 40px;
+      min-width: 77px;
+      padding: 0 8px;
+    }
+
+    @include sp {
+      min-height: 20px;
+      min-width: 38px;
+      padding: 0;
+    }
   }
 }

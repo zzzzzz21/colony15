@@ -10,6 +10,10 @@
   padding: 2px 12px;
   position: relative;
 
+  &:hover {
+    opacity: .7
+  }
+
   @include pc {
     min-height: 50px;
     min-width: 340px;
@@ -50,15 +54,36 @@
   min-height: 50px;
   min-width: 50px;
   padding: 10px;
+
+  &:hover {
+    opacity: .7
+  }
+
+  @include sp {
+    font-size: 10px;
+    min-height: 25px;
+    min-width: 25px;
+    padding: 5px;
+
+    img[width="27"] {
+      width: 14px;
+    }
+
+    img[width="32"] {
+      width: 16px;
+    }
+  }
 }
 
 .c-button-border {
   align-items: center;
   border: 2px solid $base-deep-green;
   display: inline-flex;
+  font-weight: bold;
   justify-content: center;
 
   @include pc {
+    font-size: 18px;
     min-height: 52px;
     min-width: 272px;
     &:hover {
@@ -68,7 +93,8 @@
   }
 
   @include sp {
-    
+    min-height: 20px;
+    min-width: 112px;
   }
 }
 
@@ -78,8 +104,18 @@
   flex-direction: column;
   margin: 0 auto;
 
+  @include sp {
+    img {
+      width: 20px;
+    }
+  }
+
   &-text {
     font-weight: bold;
     margin-top: 15px;
+
+    @include sp {
+      margin-top: 4px;
+    }
   }
 }

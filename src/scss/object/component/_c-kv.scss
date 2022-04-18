@@ -3,7 +3,6 @@
   background-image: url('../images/image-kv1.jpg');
   background-position: top;
   background-repeat: no-repeat;
-  background-size: 100%;
   color: $base-white;
   margin: 0 auto;
   padding: 60px 0 35px;
@@ -11,6 +10,7 @@
   text-align: center;
 
   @include pc {
+    background-size: cover;
     height: 391px;
 
     &::before,
@@ -33,7 +33,7 @@
   }
 
   @include sp {
-    background-size: cover;
+    background-size: 100% 177px;
     padding: 32px 0;
   }
 

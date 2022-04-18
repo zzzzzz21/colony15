@@ -5,11 +5,18 @@
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
-  padding-top: 15px;
 
   @include pc {
     background-size: 404px 86px;
     height: 86px;
+    padding-top: 15px;
     width: 404px;
+  }
+
+  @include sp {
+    background-size: 202px 43px;
+    height: 43px;
+    padding-top: 8px;
+    width: 202px;
   }
 }

@@ -3,6 +3,10 @@
   flex-wrap: wrap;
   max-width: $width-pc-inner;
   margin: 0 auto;
+
+  @include sp {
+    flex-direction: column;
+  }
 }
 
 .p-footer-overview,
@@ -11,28 +15,59 @@
 }
 
 .p-footer-overview-text {
-  font-size: 18px;
   line-height: 1.7;
   margin-bottom: 25px;
+
+  @include pc {
+    font-size: 18px;
+  }
+
+  @include sp {
+    margin-bottom: 10px;
+  }
 }
 
 .p-footer-buttons {
   display: flex;
+
+  @include sp {
+    justify-content: center;
+  }
 }
 
 .p-footer-buttons-item {
-  margin-right: 30px;
+  @include pc {
+    margin-right: 30px;
+  }
+
+  @include sp {
+    margin-right: 15px;
+  }
 }
 
 .p-footer-nav {
-  padding-left: 50px;
+  @include pc {
+    padding-left: 50px;
+  }
+
+  @include sp {
+    margin-top: 15px;
+  }
 }
 
+
 .p-footer-copy {
-  font-size: 15px;
   line-height: 1.8;
   text-align: center;
   width: 100%;
   margin: 43px 0 0;
+
+  @include pc {
+    font-size: 15px;
+  }
+
+  @include sp {
+    margin-top: 20px;
+  }
 }
 

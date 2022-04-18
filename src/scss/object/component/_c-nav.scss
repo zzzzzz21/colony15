@@ -2,13 +2,33 @@
   font-weight: bold;
 
   &-title {
-    font-size: 18px;
     margin-bottom: 15px;
+
+    @include pc {
+      font-size: 18px;
+    }
+
+    @include sp {
+      margin-bottom: 8px;
+    }
   }
 
   &-list {
-    font-size: 16px;
     line-height: 2.2;
+
+    @include pc {
+      font-size: 16px;
+    }
+
+    @include sp {
+      display: flex;
+    }
+  }
+
+  &-list-item {
+    @include sp {
+      padding: 0 5px;
+    }
   }
 }
 
