@@ -778,20 +778,6 @@ address {
     background-size: cover;
     height: 391px;
   }
-  .c-kv::before, .c-kv::after {
-    background: #fff;
-    content: "";
-    height: 100%;
-    position: absolute;
-    top: 0;
-    width: 10px;
-  }
-  .c-kv::before {
-    left: 0;
-  }
-  .c-kv::after {
-    right: 0;
-  }
 }
 @media screen and (max-width: 768px) {
   .c-kv {
@@ -973,6 +959,12 @@ address {
   margin: auto;
   position: absolute;
   top: 0;
+}
+@media screen and (min-width: 769px) {
+  .c-title-bar-icon {
+    height: 53px;
+    width: auto;
+  }
 }
 @media screen and (max-width: 768px) {
   .c-title-bar-icon {
@@ -1227,7 +1219,7 @@ address {
   .p-top-merit-kv {
     height: 391px;
     margin-bottom: 70px;
-    width: calc(100% - 20px);
+    width: 100%;
   }
 }
 @media screen and (max-width: 768px) {

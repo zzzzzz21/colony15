@@ -12,24 +12,6 @@
   @include pc {
     background-size: cover;
     height: 391px;
-
-    &::before,
-    &::after {
-      background: $base-white;
-      content: "";
-      height: 100%;
-      position: absolute;
-      top: 0;
-      width: 10px;
-    }
-  
-    &::before {
-      left: 0;
-    }
-  
-    &::after {
-      right: 0;
-    }
   }
 
   @include sp {

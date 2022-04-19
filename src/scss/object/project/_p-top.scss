@@ -102,7 +102,7 @@
     @include pc {
       height: 391px;
       margin-bottom: 70px;
-      width: calc(100% - 20px);
+      width: 100%;
     }
 
     @include sp {
